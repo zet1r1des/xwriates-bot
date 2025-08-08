@@ -3,13 +3,12 @@ from discord.ui import View, Button
 from discord.ext import tasks
 import os
 
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv(TOKEN)
 APPLICATION_CHANNEL_ID = 1354044535507779607  # Replace with your channel ID
 APPROVED_ROLE_ID = 1401720174847197204  # Replace with your approved role ID
 DECLINED_ROLE_ID = 1354047703314731038  # Replace with your declined role ID
 
-bot = discord.Bot(intents=discord.Intents.all())
-
+bot = discord.Bot(intents=discord.Intents.all())    
 
 class ApplicationSystem:
     """Central class to manage application state and denied users"""
@@ -330,3 +329,4 @@ async def reset_counts():
 
 
 bot.run(TOKEN)
+
